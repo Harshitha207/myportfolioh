@@ -2,101 +2,130 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
+    <div className="font-sans min-h-screen bg-gradient-to-b from-blue-50 via-white to-purple-50 text-gray-900 flex flex-col">
+      {/* HERO SECTION */}
+      <header className="flex flex-col items-center justify-center text-center py-16 px-6 bg-gradient-to-b from-blue-100 via-blue-50 to-transparent">
         <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
+          src="/profile.png"
+          alt="Profile Picture"
+          width={120}
+          height={120}
+          className="rounded-full shadow-lg mb-6 border-4 border-white"
         />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
+        <h1 className="text-3xl sm:text-4xl font-bold text-blue-900">
+          Hi, I'm Your Name 👋
+        </h1>
+        <p className="text-lg sm:text-xl mt-2 text-gray-700">
+          A passionate Web Developer & Designer
+        </p>
+        <div className="mt-6 flex gap-4">
           <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#projects"
+            className="bg-blue-600 text-white px-5 py-2 rounded-full hover:bg-blue-700 transition shadow-md"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
+            View Projects
           </a>
           <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#contact"
+            className="border border-blue-400 px-5 py-2 rounded-full hover:bg-blue-100 transition shadow-sm"
           >
-            Read our docs
+            Contact Me
           </a>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      </header>
+
+      {/* ABOUT SECTION */}
+      <section
+        id="about"
+        className="max-w-3xl mx-auto py-12 px-6 text-center bg-white/70 backdrop-blur-sm rounded-xl shadow-sm my-8"
+      >
+        <h2 className="text-2xl font-bold mb-4 text-purple-800">About Me</h2>
+        <p className="text-gray-700 leading-relaxed">
+          I'm a web developer who loves building clean, modern, and responsive
+          websites. I focus on creating user-friendly experiences using Next.js,
+          React, and Tailwind CSS.
+        </p>
+      </section>
+
+      {/* PROJECTS SECTION */}
+      <section id="projects" className="max-w-5xl mx-auto py-12 px-6">
+        <h2 className="text-2xl font-bold mb-8 text-center text-blue-800">
+          Projects
+        </h2>
+        <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
+          {[1, 2, 3].map((project) => (
+            <div
+              key={project}
+              className="bg-white rounded-xl shadow-lg hover:shadow-xl transition p-4 border border-gray-100 flex flex-col"
+            >
+              <div className="relative h-40 w-full mb-4 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg flex items-center justify-center">
+                <Image
+                  src="/next.svg"
+                  alt={`Project ${project}`}
+                  width={80}
+                  height={80}
+                  className="object-contain"
+                />
+              </div>
+              <h3 className="font-semibold text-lg text-blue-700">
+                Project {project}
+              </h3>
+              <p className="text-gray-600 text-sm mt-2 flex-grow">
+                A short description of what this project is about and what tech
+                stack was used.
+              </p>
+              <a
+                href="#"
+                className="mt-4 text-purple-700 hover:underline text-sm"
+              >
+                View Details →
+              </a>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* CONTACT SECTION */}
+      <section
+        id="contact"
+        className="max-w-3xl mx-auto py-12 px-6 text-center bg-gradient-to-r from-purple-50 to-blue-50 rounded-xl shadow-md my-8"
+      >
+        <h2 className="text-2xl font-bold mb-4 text-purple-900">
+          Get In Touch
+        </h2>
+        <p className="text-gray-700 mb-6">
+          Have a project in mind or just want to say hello? Feel free to reach
+          out!
+        </p>
+        <div className="flex justify-center gap-6">
+          <a
+            href="mailto:your@email.com"
+            className="text-blue-700 hover:underline font-medium"
+          >
+            Email
+          </a>
+          <a
+            href="https://github.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-800 hover:underline font-medium"
+          >
+            GitHub
+          </a>
+          <a
+            href="https://linkedin.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-purple-700 hover:underline font-medium"
+          >
+            LinkedIn
+          </a>
+        </div>
+      </section>
+
+      {/* FOOTER */}
+      <footer className="text-center py-6 border-t text-gray-500 text-sm bg-white/80">
+        © {new Date().getFullYear()} Your Name. All rights reserved.
       </footer>
     </div>
   );
