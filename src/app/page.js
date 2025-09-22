@@ -2,21 +2,21 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="font-sans min-h-screen bg-gradient-to-b from-blue-50 via-white to-purple-50 text-gray-900 flex flex-col">
+    <div className="font-sans min-h-screen bg-gradient-to-b from-blue-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900 text-gray-900 dark:text-gray-100 flex flex-col transition-colors duration-300">
       {/* HERO SECTION */}
-      <header className="flex flex-col items-center justify-center text-center py-16 px-6 bg-gradient-to-b from-blue-100 via-blue-50 to-transparent">
+      <header className="flex flex-col items-center justify-center text-center py-16 px-6 bg-gradient-to-b from-blue-100 via-blue-50 to-transparent dark:from-gray-800 dark:via-gray-900 dark:to-transparent">
         <Image
           src="/profile.png"
           alt="Profile Picture"
           width={120}
           height={120}
-          className="rounded-full shadow-lg mb-6 border-4 border-white"
+          className="rounded-full shadow-lg mb-6 border-4 border-white dark:border-gray-700"
         />
-        <h1 className="text-3xl sm:text-4xl font-bold text-blue-900">
-          Hi, I'm Your Name 👋
+        <h1 className="text-3xl sm:text-4xl font-bold text-blue-900 dark:text-blue-300">
+          Hi, I&apos;m Your Name 👋
         </h1>
-        <p className="text-lg sm:text-xl mt-2 text-gray-700">
-          A passionate Web Developer & Designer
+        <p className="text-lg sm:text-xl mt-2 text-gray-700 dark:text-gray-300">
+          A passionate Web Developer &amp; Designer
         </p>
         <div className="mt-6 flex gap-4">
           <a
@@ -27,7 +27,7 @@ export default function Home() {
           </a>
           <a
             href="#contact"
-            className="border border-blue-400 px-5 py-2 rounded-full hover:bg-blue-100 transition shadow-sm"
+            className="border border-blue-400 px-5 py-2 rounded-full hover:bg-blue-100 dark:hover:bg-gray-700 transition shadow-sm"
           >
             Contact Me
           </a>
@@ -37,11 +37,13 @@ export default function Home() {
       {/* ABOUT SECTION */}
       <section
         id="about"
-        className="max-w-3xl mx-auto py-12 px-6 text-center bg-white/70 backdrop-blur-sm rounded-xl shadow-sm my-8"
+        className="max-w-3xl mx-auto py-12 px-6 text-center bg-white/70 dark:bg-gray-800/60 backdrop-blur-sm rounded-xl shadow-sm my-8"
       >
-        <h2 className="text-2xl font-bold mb-4 text-purple-800">About Me</h2>
-        <p className="text-gray-700 leading-relaxed">
-          I'm a web developer who loves building clean, modern, and responsive
+        <h2 className="text-2xl font-bold mb-4 text-purple-800 dark:text-purple-300">
+          About Me
+        </h2>
+        <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+          I&apos;m a web developer who loves building clean, modern, and responsive
           websites. I focus on creating user-friendly experiences using Next.js,
           React, and Tailwind CSS.
         </p>
@@ -49,34 +51,34 @@ export default function Home() {
 
       {/* PROJECTS SECTION */}
       <section id="projects" className="max-w-5xl mx-auto py-12 px-6">
-        <h2 className="text-2xl font-bold mb-8 text-center text-blue-800">
+        <h2 className="text-2xl font-bold mb-8 text-center text-blue-800 dark:text-blue-300">
           Projects
         </h2>
         <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
           {[1, 2, 3].map((project) => (
             <div
               key={project}
-              className="bg-white rounded-xl shadow-lg hover:shadow-xl transition p-4 border border-gray-100 flex flex-col"
+              className="bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition p-4 border border-gray-100 dark:border-gray-700 flex flex-col"
             >
-              <div className="relative h-40 w-full mb-4 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg flex items-center justify-center">
+              <div className="relative h-40 w-full mb-4 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-gray-700 dark:to-gray-800 rounded-lg flex items-center justify-center">
                 <Image
                   src="/next.svg"
                   alt={`Project ${project}`}
                   width={80}
                   height={80}
-                  className="object-contain"
+                  className="object-contain dark:invert"
                 />
               </div>
-              <h3 className="font-semibold text-lg text-blue-700">
+              <h3 className="font-semibold text-lg text-blue-700 dark:text-blue-300">
                 Project {project}
               </h3>
-              <p className="text-gray-600 text-sm mt-2 flex-grow">
+              <p className="text-gray-600 dark:text-gray-400 text-sm mt-2 flex-grow">
                 A short description of what this project is about and what tech
                 stack was used.
               </p>
               <a
                 href="#"
-                className="mt-4 text-purple-700 hover:underline text-sm"
+                className="mt-4 text-purple-700 dark:text-purple-300 hover:underline text-sm"
               >
                 View Details →
               </a>
@@ -88,19 +90,19 @@ export default function Home() {
       {/* CONTACT SECTION */}
       <section
         id="contact"
-        className="max-w-3xl mx-auto py-12 px-6 text-center bg-gradient-to-r from-purple-50 to-blue-50 rounded-xl shadow-md my-8"
+        className="max-w-3xl mx-auto py-12 px-6 text-center bg-gradient-to-r from-purple-50 to-blue-50 dark:from-gray-800 dark:to-gray-900 rounded-xl shadow-md my-8"
       >
-        <h2 className="text-2xl font-bold mb-4 text-purple-900">
+        <h2 className="text-2xl font-bold mb-4 text-purple-900 dark:text-purple-300">
           Get In Touch
         </h2>
-        <p className="text-gray-700 mb-6">
+        <p className="text-gray-700 dark:text-gray-300 mb-6">
           Have a project in mind or just want to say hello? Feel free to reach
           out!
         </p>
         <div className="flex justify-center gap-6">
           <a
             href="mailto:your@email.com"
-            className="text-blue-700 hover:underline font-medium"
+            className="text-blue-700 dark:text-blue-300 hover:underline font-medium"
           >
             Email
           </a>
@@ -108,7 +110,7 @@ export default function Home() {
             href="https://github.com/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-800 hover:underline font-medium"
+            className="text-gray-800 dark:text-gray-200 hover:underline font-medium"
           >
             GitHub
           </a>
@@ -116,7 +118,7 @@ export default function Home() {
             href="https://linkedin.com/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-purple-700 hover:underline font-medium"
+            className="text-purple-700 dark:text-purple-300 hover:underline font-medium"
           >
             LinkedIn
           </a>
@@ -124,9 +126,10 @@ export default function Home() {
       </section>
 
       {/* FOOTER */}
-      <footer className="text-center py-6 border-t text-gray-500 text-sm bg-white/80">
+      <footer className="text-center py-6 border-t border-gray-200 dark:border-gray-700 text-gray-500 dark:text-gray-400 text-sm bg-white/80 dark:bg-gray-900/70">
         © {new Date().getFullYear()} Your Name. All rights reserved.
       </footer>
     </div>
   );
 }
+
