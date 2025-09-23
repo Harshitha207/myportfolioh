@@ -7,13 +7,13 @@ export default function Home() {
       <header className="flex flex-col items-center justify-center text-center py-16 px-6 bg-gradient-to-b from-blue-100 via-blue-50 to-transparent dark:from-gray-800 dark:via-gray-900 dark:to-transparent">
         <Image
           src="/profile.png"
-          alt="Profile "
+          alt="Profile"
           width={120}
           height={120}
           className="rounded-full shadow-lg mb-6 border-4 border-white dark:border-gray-700"
         />
         <h1 className="text-3xl sm:text-4xl font-bold text-blue-900 dark:text-blue-300">
-          Hi, I&apos;m chatbot👋
+          Hi, I&apos;m chatbot how can i help u 👋
         </h1>
         <p className="text-lg sm:text-xl mt-2 text-gray-700 dark:text-gray-300">
           A passionate Web Developer &amp; Designer
